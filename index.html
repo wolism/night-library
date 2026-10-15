@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100e18">
+  <meta name="description" content="کتابخانه‌ای تاریک و فانتزی برای آرشیو و مطالعه آنلاین ناول‌ها">
+  <title>کتابخانه شب | آرشیو ناول</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" id="homeLink" aria-label="صفحه اصلی">
+      <span class="brand-mark">✦</span>
+      <span><strong>کتابخانه شب</strong><small>آرشیو ناول‌های فانتزی</small></span>
+    </a>
+    <button class="menu-button" id="menuButton" aria-label="نمایش منو">☰</button>
+    <nav id="topNav">
+      <a href="#library">کتابخانه</a>
+      <a href="#about">درباره</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+      <div class="hero-content">
+        <p class="eyebrow">✧ دروازه‌ای به جهان‌های دیگر ✧</p>
+        <h1>هر کتاب، <span>یک جهان ناشناخته</span></h1>
+        <p class="hero-copy">میان افسانه‌های فراموش‌شده قدم بزن؛ داستان بعدی‌ات همین‌جاست.</p>
+        <a class="primary-button" href="#library">ورود به کتابخانه <span>←</span></a>
+      </div>
+      <div class="moon" aria-hidden="true"><span></span></div>
+      <div class="hero-runes" aria-hidden="true">ᚠ　✧　ᛟ　☾　ᚱ</div>
+    </section>
+
+    <section class="library-section" id="library">
+      <div class="section-heading">
+        <div><p class="eyebrow">آرشیو شخصی تو</p><h2>قفسه‌های کتابخانه</h2></div>
+        <span class="count" id="novelCount">۰ اثر</span>
+      </div>
+      <div class="tools">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="جست‌وجوی نام ناول یا نویسنده..." autocomplete="off"></label>
+        <select id="genreFilter" aria-label="فیلتر ژانر">
+          <option value="all">همه ژانرها</option>
+        </select>
+      </div>
+      <div id="novelGrid" class="novel-grid"></div>
+      <p id="emptyState" class="empty-state" hidden>چیزی پیدا نشد؛ عبارت دیگری را امتحان کن.</p>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="sigil">✧</div>
+      <div><p class="eyebrow">درباره این آرشیو</p><h2>پناهگاهی برای عاشقان داستان</h2>
+      <p>این نسخه‌ی اولیه، یک کتابخانه‌ی ساده و سازگار با گوشی است. برای افزودن آثار خودت، راهنمای داخل فایل دانلودشده را بخوان و اطلاعات کتاب‌ها و فصل‌ها را در فایل <code>app.js</code> ویرایش کن.</p></div>
+    </section>
+  </main>
+
+  <footer><span>✦ کتابخانه شب</span><span>ساخته‌شده برای دوست‌داران ناول</span></footer>
+
+  <div class="modal-backdrop" id="novelModal" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close-button" id="closeModal" aria-label="بستن">×</button>
+      <div id="novelDetails"></div>
+    </section>
+  </div>
+
+  <div class="reader-backdrop" id="reader" hidden>
+    <article class="reader-panel">
+      <header class="reader-top">
+        <button id="closeReader" class="text-button">← بازگشت به کتاب</button>
+        <button id="fontMinus" class="reader-control" aria-label="کوچک کردن متن">A−</button>
+        <button id="fontPlus" class="reader-control" aria-label="بزرگ کردن متن">A+</button>
+      </header>
+      <div class="reader-inner">
+        <p class="eyebrow" id="readerNovel"></p>
+        <h1 id="chapterTitle"></h1>
+        <div class="reader-rule">✦ ───────── ✦</div>
+        <div id="chapterText" class="chapter-text"></div>
+        <div class="chapter-navigation">
+          <button id="prevChapter" class="secondary-button">فصل قبلی</button>
+          <span id="chapterPosition"></span>
+          <button id="nextChapter" class="primary-button">فصل بعدی ←</button>
+        </div>
+      </div>
+    </article>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
