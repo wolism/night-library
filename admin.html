@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مدیریت کتابخانه شب</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #100d18;
+      color: #eee7ff;
+      font-family: sans-serif;
+    }
+    header {
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #6a00ff;
+      color: #cbb2ff;
+      text-shadow: 0 0 10px #6a00ff;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    nav a {
+      color: #eee7ff;
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid #6a00ff;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #6a00ff;
+      color: #fff;
+    }
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      box-shadow: 0 0 20px #6a00ff;
+      padding: 20px;
+    }
+    input, textarea, select, button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #6a00ff;
+      background: #1a1525;
+      color: #eee7ff;
+    }
+    button {
+      background: #6a00ff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #8a2fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>مدیریت کتابخانه شب</h1>
+  </header>
+  <nav>
+    <a href="#novels">ناول‌ها</a>
+    <a href="#authors">نویسندگان</a>
+    <a href="#categories">دسته‌بندی‌ها</a>
+  </nav>
+  <main>
+    <section id="novels">
+      <h2>افزودن ناول جدید</h2>
+      <input type="text" placeholder="عنوان ناول">
+      <textarea placeholder="توضیحات"></textarea>
+      <select>
+        <option>فانتزی</option>
+        <option>درام</option>
+        <option>اکشن</option>
+      </select>
+      <button>ذخیره ناول</button>
+    </section>
+  </main>
+</body>
+</html>
